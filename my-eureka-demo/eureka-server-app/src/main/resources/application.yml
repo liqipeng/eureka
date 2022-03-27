@@ -7,7 +7,16 @@ eureka:
   instance:
     hostname: eureka-server1
   client:
+    # Eureka服务注册中心也会将自己作为客户端来尝试注册它自己，所以我们需要禁用它的客户端注册行为。
     # register-with-eureka: false # 是否把自己注册到 Eureka，单机情况下，不需要注册自己。
     # fetch-registry: false       # 否到 Euraka 服务抓取注册信息。
     serviceUrl:
+      # 将自己注册到 eureka-server2 这个eureka上面
       defaultZone: http://eureka-server2:8712/eureka/
+  #server:
+      #关闭自我保护,如果没有关闭自我保护则会导致客户端继续访问已停微服务
+      #开启自我保护后，如果注册表里的服务关闭了，Eureka Server不会注销该服务，会等待服务自动修复
+      #为了让其有精准的 CP健康检查，可以关闭自我保护功能，让其剔除不健康节点。
+      #enable-self-preservation: false
+      #定时清理服务器
+      #eviction-interval-timer-in-ms: 5000
