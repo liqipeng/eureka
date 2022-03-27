@@ -1,0 +1,16 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="ProductServiceApplication-8721" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+    <module name="eureka-client-product-service" />
+    <extension name="coverage">
+      <pattern>
+        <option name="PATTERN" value="com.example.eurekaclientdemo.*" />
+        <option name="ENABLED" value="true" />
+      </pattern>
+    </extension>
+    <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.eurekaclientdemo.ProductServiceApplication" />
+    <option name="ALTERNATIVE_JRE_PATH" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
